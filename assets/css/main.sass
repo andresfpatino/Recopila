@@ -1,0 +1,123 @@
+
+$assetPath: "/wp-content/uploads"
+$verde: #6A8042 
+$verdeOscuro: #3A8635
+$gris: #6f6f6f 
+$grisOscuro: #706F6F
+$fontFamily: "Montserrat Alternates"
+
+* 
+    outline: none !important
+    &:hover, &:active, &:focus   
+        outline: none !important
+
+.RCPLA
+    &__menu
+        .sub-menu
+            position: relative !important 
+            margin: 0 !important
+            display: block !important
+            width: 100% !important
+        .menu-image
+            width: 37px
+        .elementor-sub-item
+            justify-content: flex-start
+
+
+    &__rotate
+        transform: rotate(90deg)
+
+    &__open-menu-icon
+        cursor: pointer 
+        .elementor-icon-wrapper
+            height: 20px
+            margin: 0
+            padding: 0
+            cursor: pointer
+
+    &__close-popup,
+    &__open-menu-label
+        cursor: pointer 
+
+    &__text-clip
+        background-color: #fff
+        .n2-ss-item-content
+            -webkit-background-clip: text !important
+            -moz-background-clip: text
+            background-clip: text
+    
+    &__step-process
+        .elementor-icon
+            border-radius: 50%
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15%)
+
+   
+    // Ribbon titles
+    @import 'components/titles'
+
+    // Actividades realizadas
+    @import 'components/actividades'
+    
+    // Blog
+    @import 'components/blog'
+        
+    &__contact 
+        select 
+            option:disabled 
+                color: #989898
+    
+    &__blog-grid
+        .elementor-post__read-more
+            background-color: $verde
+            padding: 11px 25px
+            display: inline-block
+            line-height: 1em
+            border-radius: 8px
+            &:hover
+                background-color: $gris
+
+    &_select
+        background-color: rgba(197, 197, 197,.3)
+        padding: 5px 15px
+        width: 100%
+        font-family: $fontFamily
+
+    &__slide-jornadas
+        .swiper-wrapper
+            flex-flow: row nowrap !important
+        .elementor-icon-box-description
+            max-height: 65px
+            overflow: hidden
+            overflow-y: scroll
+            padding-right: 3px
+            &::-webkit-scrollbar 
+                width: 3px
+            &::-webkit-scrollbar-track 
+                background: #f1f1f1
+            &::-webkit-scrollbar-thumb 
+                background: $gris
+                border-radius: 5px
+
+        .RCPLA
+            &__navigation
+                background-color: red
+            &__button
+                width: 35px
+                height: 35px
+                position: absolute
+                top: 50%
+                z-index: 10
+                cursor: pointer
+                background-image: url('#{$assetPath}/arrows.svg')
+                background-size: 70px
+                &.prev
+                    left: -25px 
+                    background-position: left top                   
+                &.next
+                    right: 0px
+                    background-position: right bottom    
+
+
+    // Blog
+    @import 'components/responsive'
+
